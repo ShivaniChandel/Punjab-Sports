@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.Register">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        tools:ignore="MissingConstraints"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/back_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/register"
+            android:textColor="@color/lightblack"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:scaleType="center"
+
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="Name"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Aadhaar Card No"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/Aadhaar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="12"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Father's Name"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/fathername"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Mother's Name"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/mothername"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Gender"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/gender_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:autofillHints="jhvjhvhg"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Date of Birth"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:hint="dd-mm-yyyy"
+                android:singleLine="true"
+                android:textColor="@color/lightblack" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Diet"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/diet_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Father's Occupation"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/fathers_occupation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Class"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/class_pc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Blood Group"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/blood_group"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="City"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textAutoCorrect"
+                android:singleLine="true" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="State"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/statename"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Email"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Phone"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="District"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Grardian To Be Contacted In An Emergency"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/emergency"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Sports Applied for"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sportsappliedfor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Game Event"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+                <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/msportssubcategory"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="40sp"
+                    app:hintText="--Select--"
+                    tools:ignore="MissingClass" />
+
+
+                <Spinner
+
+                    android:visibility="gone"
+                    android:id="@+id/sportssubcategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Sports Centre"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/msportscenter"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="40sp"
+                    app:hintText="--Select--"
+                    tools:ignore="MissingClass" />
+
+
+
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/sportscenter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Coaches"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/coaches"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Sports Achievements"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sportsachive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Sports Area"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sportsarea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Caste"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/caste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/dropdown" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="UserName(Mobile No./Aadhaar Card)"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:minLines="10"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Passward"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/passward"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Confirm Passward"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/confpass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Permanent Address"
+                android:textColor="@color/lightblack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editview_bg"
+                android:gravity="center_vertical"
+                android:imeOptions="actionDone"
+                android:inputType="textAutoCorrect"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/register_btn"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/rlClick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:ignore="KeyboardInaccessibleWidget,MissingConstraints"
+        tools:visibility="visible">
+
+        <com.punjab.sports.sevices.CustomProgressWheel
+            android:id="@+id/fragment_resources_link_progress_wheel"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:barColor="@color/teal_200" />
+
+    </FrameLayout>
+
+</FrameLayout>

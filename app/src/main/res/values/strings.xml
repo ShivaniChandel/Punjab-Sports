@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Khedo Punjab</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="register">Registration</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_register">Register</string>
+    <string name="noNet">No Internet Connect Found</string>
+    <string name="ok">OK</string>
+    <string name="namenotfound">Please enter Name</string>
+    <string name="aadharnotfound">Please enter Aadhaar Card Number</string>
+    <string name="fathernotfound">Please enter Father name</string>
+    <string name="mothernotfound">Please enter Mother name</string>
+    <string name="occupationnotfound">Please enter Father occupation</string>
+    <string name="classnotfound">Please enter Class</string>
+    <string name="bloodnotfound">Please enter Blood group</string>
+    <string name="citynotfound">Please enter City</string>
+    <string name="emailnotfound">Please enter Email</string>
+    <string name="phonenotfound">Please enter Phone number</string>
+    <string name="emergencynotfound">Please enter Grardian  contact</string>
+    <string name="usernotfound">Please enter Username</string>
+    <string name="passwordnotfound">Please enter Password</string>
+    <string name="confpassnotfound">Please enter Confirm Password</string>
+    <string name="addressnotfound">Please enter Address</string>
+    <string name="donnotfound">Please select DOB</string>
+    <string name="notmathch">Confirm Password not match</string>
+    <string name="statenotfound">Please select District.</string>
+    <string name="appliednotfound">Please select sports name</string>
+    <string name="centrenotfound">Please select sports centre name</string>
+    <string name="coachnotfound">Please select Coache name</string>
+    <string name="title_activity_success_message">SuccessMessage</string>
+</resources>
