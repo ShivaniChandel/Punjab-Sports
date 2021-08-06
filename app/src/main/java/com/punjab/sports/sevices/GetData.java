@@ -27,7 +27,7 @@ public interface GetData {
 
     @POST("Registration")
     @FormUrlEncoded
-    Call<registeration> getregister(@Field("SportsAppliedFor.PlayerID") String PlayerID,
+    Call<registeration> getregister(@Field("SportsAppliedFor.SportID") String SportID,
                                     @Field("SportCenterID") String SportCenterID,
                                     @Field("SportSubCategory") String SportSubCategory,
                                     @Field("UserID") String UserID,
@@ -58,7 +58,7 @@ public interface GetData {
                                     @Field("UserType") String UserType,
                                     @Field("UsersMaster.UserName") String UserName,
                                     @Field("UsersMaster.Password") String Password,
-                                    @Field("PlayerID") String applied,
+                                    @Field("PlayerID") String PlayerID,
                                     @Field("CoachesAssigned.CoachID") String CoachID,
                                     @Field("SportsAchievements") String Beginner
 

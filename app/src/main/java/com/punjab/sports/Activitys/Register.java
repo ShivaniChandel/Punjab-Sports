@@ -824,7 +824,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
                             scategory = "";
                             ResetSpinners();
                             datamanager.getSubCategoryTospoSport(Register.this, String.valueOf(response1.get(position).getSportID()));
-                            //datamanager.getCenterAccToSport(Register.this, String.valueOf(response1.get(position).getSportID()), sstate, scategory);
+                          //  datamanager.getCenterAccToSport(Register.this, String.valueOf(response1.get(position).getSportID()), sstate, scategory);
 
                         } else {
                             customDoubleOptionAlert(Register.this, getResources().getString(R.string.noNet), "Ok", "Khedo Punjab", R.mipmap.ic_launcher, 1, false, Register.this);
@@ -870,12 +870,14 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
 
                 try {
 
-                    if (sportsarea.getSelectedItem().toString().equalsIgnoreCase("Open")) {
+                     sarea = sportsarea.getSelectedItem().toString();
+
+                    /*if (sportsarea.getSelectedItem().toString().equalsIgnoreCase("Open")) {
                         sarea = "2";
                     } else {
                         sarea = "1" +
                                 "";
-                    }
+                    }*/
                     Log.i("TAG", "======position=====" + position);
                     Log.i("TAG", "======sarea=====" + sarea);
                 } catch (Exception e) {
