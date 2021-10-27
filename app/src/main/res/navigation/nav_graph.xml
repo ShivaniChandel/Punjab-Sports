@@ -107,7 +107,7 @@
         android:id="@+id/register2"
         android:name="com.punjab.sports.Activitys.Register"
         android:label="activity_register"
-        tools:layout="@layout/activity_register" >
+        tools:layout="@layout/activity_register">
         <action
             android:id="@+id/register_to_success"
             app:destination="@id/First2Fragment" />

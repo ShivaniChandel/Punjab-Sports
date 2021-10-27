@@ -36,6 +36,7 @@ import com.punjab.sports.AdapterClass.CoachAccToCentreAdapter;
 import com.punjab.sports.AdapterClass.SportsDistrictAdapter;
 import com.punjab.sports.AdapterClass.SportsappliedforAdapter;
 import com.punjab.sports.AlertDialog.DialogSingleAlert;
+import com.punjab.sports.BaseClass.BaseFragment;
 import com.punjab.sports.ModelClasses.CenterAccToSport;
 import com.punjab.sports.ModelClasses.CoachAccToCentre;
 import com.punjab.sports.ModelClasses.SportsAppliedFor;
@@ -61,13 +62,13 @@ import okhttp3.RequestBody;
 
 import static android.text.TextUtils.isEmpty;
 
-public class Register extends AppCompatActivity implements Datamanger.getregister, DialogSingleAlert.OnDoubleOptionAlertClickListener, Datamanger.getSportsAppliedFormanager, Datamanger.getCenterAccToSportmanager, Datamanger.getSubCategoryTospoSportmanager, Datamanger.getCoachAccToCentremanager, Datamanger.getSportsDistrictmanager, MultiSpinnerListener {
+public class Register extends AppCompatActivity implements Datamanger.getregister, BaseFragment.OnDoubleOptionAlertClickListener, Datamanger.getSportsAppliedFormanager, Datamanger.getCenterAccToSportmanager, Datamanger.getSubCategoryTospoSportmanager, Datamanger.getCoachAccToCentremanager, Datamanger.getSportsDistrictmanager, MultiSpinnerListener, Datamanger.getpisregister {
 
 
     /*LOADER VARIABLE*/
     private CustomProgressWheel fragment_resources_link_progress_wheel;
     FrameLayout rlClick;
-    TextView register_btn;
+    TextView title_txt,register_btn;
     EditText name, Aadhaar, fathername, mothername, fathers_occupation, class_pc, blood_group, city, email, phone, emergency, username, passward, confpass, address;
     ImageView back_img;
     TextView dob;
@@ -88,6 +89,8 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
     private DatePicker datePicker;
     private Calendar calendar;
     private int year, month, day;
+    boolean registervalue = false;
+    String valueofstring="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +105,10 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
         getSubCategoryTospoSport = this;
         getCoachAccToCentre = this;
         getSportsDistrict = this;
+       // registervalue=getIntent().getBooleanExtra("register",false);
+        valueofstring=getIntent().getStringExtra("value");
+       // Log.i("TAG", "======registervalue=====" + registervalue);
+        Log.i("TAG", "======valueofstring=====" + valueofstring);
         init();
     }
 
@@ -230,7 +237,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
 
             showloader(false);
 // we pass our item list and context to our Adapter.
-          //  response2.clear();
+            //  response2.clear();
             multipledata.clear();
 
             // A text that will display in search hint.
@@ -400,8 +407,8 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
     String[] gender = {"Male", "Female"};
     String[] state_name = {"Punjab"};
     String[] Diet = {"Veg", "Non Veg"};
-    String[] Achaviments = {"Beginner", "District","State", "National games", "International", "Inter collage", "Inter university",};
-    String[] SportsAre = {"School", "Open"};
+    String[] Achaviments = {"Beginner", "District", "State", "National games", "International", "Inter collage", "Inter university",};
+    String[] SportsAre = {"School", "Open", "University"};
     String[] Cast = {"General", "SC", "ST", "OBC"};
 
     String sgender, sdiet, selected_state = "", sstate = "", sappiled = "", scategory = "", scentre = "", scoach = "", sachive, sarea, scast;
@@ -523,6 +530,10 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
         showloader(false);
 
         register_btn = findViewById(R.id.register_btn);
+        title_txt = findViewById(R.id.title_txt);
+
+        title_txt.setText(valueofstring);
+
         back_img = findViewById(R.id.back_img);
 
         dob = findViewById(R.id.dob);
@@ -588,7 +599,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < items.size(); i++) {
                     if (items.get(i).isSelected()) {
-                        Log.i("========msportscenter==========", i + " : " + items.get(i).getName() + " : " + items.get(i).isSelected());
+                       // Log.i("========msportscenter==========", i + " : " + items.get(i).getName() + " : " + items.get(i).isSelected());
                         sb.append(items.get(i).getId() + ",");
 
                     }
@@ -606,7 +617,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
                         if (sb.toString().length() > 0) {
                             showloader(true);
                             Log.i("TAG", "======scentre=====" + scentre);
-                            datamanager.getCoachAccToCentre(Register.this, scentre, sappiled, scategory);
+                            datamanager.getCoachAccToCentre(Register.this, scentre, sappiled, scategory,sstate);;
                         }
 
                     } else {
@@ -824,7 +835,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
                             scategory = "";
                             ResetSpinners();
                             datamanager.getSubCategoryTospoSport(Register.this, String.valueOf(response1.get(position).getSportID()));
-                          //  datamanager.getCenterAccToSport(Register.this, String.valueOf(response1.get(position).getSportID()), sstate, scategory);
+                            //  datamanager.getCenterAccToSport(Register.this, String.valueOf(response1.get(position).getSportID()), sstate, scategory);
 
                         } else {
                             customDoubleOptionAlert(Register.this, getResources().getString(R.string.noNet), "Ok", "Khedo Punjab", R.mipmap.ic_launcher, 1, false, Register.this);
@@ -870,7 +881,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
 
                 try {
 
-                     sarea = sportsarea.getSelectedItem().toString();
+                    sarea = sportsarea.getSelectedItem().toString();
 
                     /*if (sportsarea.getSelectedItem().toString().equalsIgnoreCase("Open")) {
                         sarea = "2";
@@ -1037,40 +1048,44 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
                         showloader(true);
 
 
-                        datamanager.getregister(Register.this, "0",
-                                "0",
-                                sgender,
-                                dob.getText().toString(),
-                                Aadhaar.getText().toString(),
-                                sdiet,
-                                fathername.getText().toString(),
-                                mothername.getText().toString(),
-                                fathers_occupation.getText().toString(),
-                                class_pc.getText().toString(),
-                                blood_group.getText().toString(),
-                                address.getText().toString(),
-                                emergency.getText().toString(),
-                                "Indian",
-                                scast,
-                                phone.getText().toString(),
-                                email.getText().toString(),
-                                city.getText().toString(),
-                                selected_state,
-                                "India",
-                                "Approved",
-                                "img12.jpg",
-                                formattedDate,
-                                sarea,
-                                "U14",
-                                name.getText().toString(),
-                                "AP",
-                                username.getText().toString(),
-                                passward.getText().toString(),
-                                sachive,
-                                scoach,
-                                sappiled,
-                                scentre,
-                                scategory);
+
+
+                            datamanager.getregister(Register.this, "0",
+                                    "0",
+                                    sgender,
+                                    dob.getText().toString(),
+                                    Aadhaar.getText().toString(),
+                                    sdiet,
+                                    fathername.getText().toString(),
+                                    mothername.getText().toString(),
+                                    fathers_occupation.getText().toString(),
+                                    class_pc.getText().toString(),
+                                    blood_group.getText().toString(),
+                                    address.getText().toString(),
+                                    emergency.getText().toString(),
+                                    "Indian",
+                                    scast,
+                                    phone.getText().toString(),
+                                    email.getText().toString(),
+                                    city.getText().toString(),
+                                    selected_state,
+                                    "India",
+                                    "Approved",
+                                    "img12.jpg",
+                                    formattedDate,
+                                    sarea,
+                                    "U14",
+                                    name.getText().toString(),
+                                    "AP",
+                                    username.getText().toString(),
+                                    passward.getText().toString(),
+                                    sachive,
+                                    scoach,
+                                    sappiled,
+                                    scentre,
+                                    scategory);
+
+
                     } else {
                         customDoubleOptionAlert(Register.this, getResources().getString(R.string.noNet), "Ok", "Khedo Punjab", R.mipmap.ic_launcher, 1, false, Register.this);
                     }
@@ -1103,7 +1118,7 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
     }
 
     public void customDoubleOptionAlert(Context context, String msg, String button1, String title, int icon, final int id,
-                                        boolean isCancelable, final DialogSingleAlert.OnDoubleOptionAlertClickListener listener) {
+                                        boolean isCancelable, final BaseFragment.OnDoubleOptionAlertClickListener listener) {
 
         // show the alert dialog
         DialogSingleAlert alert = new DialogSingleAlert(context,
@@ -1227,4 +1242,5 @@ public class Register extends AppCompatActivity implements Datamanger.getregiste
         }
 
     }
+
 }

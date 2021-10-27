@@ -6,7 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="register">Registration</string>
+    <string name="register">Sports Department Registration</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
@@ -15,6 +15,7 @@
     <string name="title_activity_web">WebActivity</string>
     <string name="title_activity_register">Register</string>
     <string name="noNet">No Internet Connect Found</string>
+    <string name="update">You are missing out on our latest update</string>
     <string name="ok">OK</string>
     <string name="namenotfound">Please enter Name</string>
     <string name="aadharnotfound">Please enter Aadhaar Card Number</string>
@@ -38,4 +39,7 @@
     <string name="centrenotfound">Please select sports centre name</string>
     <string name="coachnotfound">Please select Coache name</string>
     <string name="title_activity_success_message">SuccessMessage</string>
+    <string name="pis">PIS</string>
+    <string name="psd">Punjab Sports Department</string>
+    <string name="title_activity_register_step2">RegisterStep2</string>
 </resources>

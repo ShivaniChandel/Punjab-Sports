@@ -84,7 +84,7 @@ public interface GetData {
     /*--------CoachAccToCentre---------*/
 
     @GET("CoachAccToCentre")
-    Call<List<CoachAccToCentre>> getCoachAccToCentre(@Query("CenterId") String CenterId,@Query("Sportid") String Sportid,@Query("SportsSubCategory") String SportsSubCategory);
+    Call<List<CoachAccToCentre>> getCoachAccToCentre(@Query("CenterId") String CenterId,@Query("Sportid") String Sportid,@Query("SportsSubCategory") String SportsSubCategory,@Query("DistrictId") String DistrictId);
 
 
     /*--------SportsDistrict---------*/

@@ -23,8 +23,7 @@ public class CustomDialog extends CustomBaseDialog {
      * Widgets
      */
     TextView label;
-    private TextView  message;
-    ImageView cancel;
+    private TextView  pis,psd;
 
 
     /**
@@ -48,9 +47,9 @@ public class CustomDialog extends CustomBaseDialog {
 
         label = inflate
                 .findViewById(R.id.label);
-        message = inflate
-                .findViewById(R.id.message);
-        cancel = inflate.findViewById(R.id.cancel);
+        pis = inflate
+                .findViewById(R.id.btn_pis);
+        psd = inflate.findViewById(R.id.btn_psd);
 
 
 
@@ -68,10 +67,20 @@ public class CustomDialog extends CustomBaseDialog {
      * <p/>
      * *******************************************************************************************
      */
-    public void show(String msg,String title) {
-        message.setText(msg);
+    public void show(String title) {
+
         label.setText(title);
-        cancel.setOnClickListener(new View.OnClickListener() {
+        pis.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                dismiss();
+
+
+            }
+        });
+        psd.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/container"
     tools:context=".FirstFragment">
 
 
@@ -66,7 +67,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:gravity="center"
                             android:text="Introduction"
                             android:textColor="@color/black"
@@ -105,7 +106,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:gravity="center"
                             android:text="Registration"
                             android:textColor="@color/black"
@@ -152,7 +153,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:gravity="center"
                             android:text="Login"
                             android:textColor="@color/black"
@@ -188,7 +189,7 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -235,11 +236,11 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
+                            android:padding="10dp"
                             android:text="Olympian &amp; Asian Medalist"
                             android:textColor="@color/black"
                             android:textSize="14sp"
@@ -274,12 +275,12 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="DSO &amp; Centre List"
+                            android:text="DSO Office Address and Centre"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -322,7 +323,7 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -361,7 +362,7 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -409,7 +410,7 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -448,7 +449,7 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -497,12 +498,12 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="PIS"
+                            android:text="Punjab State Institution Of Sports "
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -536,12 +537,12 @@
 
 
                         <TextView
-                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Sports University"
+                            android:text="Maharaja Bhupinder Singh Punjab Sports University,Patiala"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />

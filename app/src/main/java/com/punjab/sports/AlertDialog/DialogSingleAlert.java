@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 
 import com.punjab.sports.Activitys.Register;
+import com.punjab.sports.BaseClass.BaseFragment;
 import com.punjab.sports.R;
 
 
@@ -69,7 +70,7 @@ public class DialogSingleAlert extends CustomBaseDialog {
      */
     public void show(String msg, String button1, String title,
                      int icon, final int id,
-                     final OnDoubleOptionAlertClickListener listener) {
+                     final BaseFragment.OnDoubleOptionAlertClickListener listener) {
         message.setText(msg);
         ok.setText(button1);
         label.setText(title);
@@ -86,9 +87,9 @@ public class DialogSingleAlert extends CustomBaseDialog {
 
         super.show();
     }
-public interface OnDoubleOptionAlertClickListener {
+/*public interface OnDoubleOptionAlertClickListener  {
         void onDoubleOptionAlertOkClick(int id);
 
         void onDoubleOptionAlertCancelClick(int id);
-    }
+    }*/
 }

@@ -33,7 +33,8 @@ public class SuccessMessage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String url = "https://pbsports.in/Login";
+                //String url = "https://pbsports.in/Login";
+                String url = "https://pbsports.in/LoginOptions.html";
                 Intent intent = new Intent(SuccessMessage.this, WebActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("url", url);

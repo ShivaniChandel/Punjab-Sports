@@ -16,9 +16,14 @@
             android:name=".Activitys.SuccessMessage"
             android:label="@string/title_activity_success_message"
             android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activitys.Register"
+            android:label="@string/title_activity_register"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.PISRegister"
             android:label="@string/title_activity_register"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
